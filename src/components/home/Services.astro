@@ -1,0 +1,26 @@
+---
+const array = Array(11).fill(0);
+---
+<section class="bg-black text-white">
+    <div class="py-12">
+        <h2 class="text-3xl font-semibold mb-10">Our services</h2>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {
+
+                array.map((value) => {
+
+                        return (
+                            <div class="flex items-center justify-center p-4 border border-gray-800 rounded-3xl py-20">
+                                <div class="text-center">
+                                    <div class="mb-4">📱</div>
+                                    <h3 class="text-xl font-medium">Mobile Apps</h3>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    </div>
+</section>
