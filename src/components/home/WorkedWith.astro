@@ -1,0 +1,27 @@
+---
+const array = Array(9).fill(0);
+---
+<section class="bg-black text-white">
+    <div class="py-12">
+        <h2 class="text-3xl font-semibold mb-10">The industries we’ve worked with.</h2>
+        <p class="text-base mb-10">Digital transformation isn’t limited to any one particular industry. We work with companies spanning a wide range of sectors to help them unleash their full potential through human-centred global tech solutions. Whether you’re looking to captivate target audiences, gain competitive edge or simply carry on doing what you do best and let technology take care of the rest, we can work together to unearth your unique pain points and make your business ambitions a reality.</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {
+
+                array.map((value) => {
+
+                        return (
+                            <div class="flex items-center justify-center p-4 border border-gray-800 rounded-3xl py-20">
+                                <div class="text-center">
+                                    <div class="mb-4">📱</div>
+                                    <h3 class="text-xl font-medium">Financial Services</h3>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    </div>
+</section>
