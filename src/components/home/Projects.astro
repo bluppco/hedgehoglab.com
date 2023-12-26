@@ -1,23 +1,28 @@
 ---
 // IMPORT ASTRO LAYOUTS
 import Container from "../../layouts/Container.astro"
----
 
+// IMPORT ASTRO ATOMS
+import H2 from "../../atoms/H2.astro"
+---
 <section class="bg-zinc-900">
     <Container>
-        <div class="flex flex-wrap items-center px-6 py-16 md:py-24">
-            <div class="md:w-1/2 w-full md:pr-10">
-                <h1 class="text-5xl font-bold text-white leading-tight mb-6">
-                    Human-centred global tech solutions.
-                </h1>
-                <p class="text-lg text-gray-300 mb-8">
+        <div class="grid grid-cols-2 gap-10">
+            <div class="flex flex-col gap-8 justify-center">
+                <H2>Human-centred global tech solutions.</H2>
+                <p class="text-lg text-white">
                     From financial services to pharmaceuticals, energy giants to fast food connoisseurs – we’ve partnered with global brands that are leaders in their field. But while we’re proud of our projects, we’re constantly curious about what’s next. If you’ve got a business challenge, we’d love to help you solve it through carefully considered, intelligent tech solutions.
                 </p>
-                <a href="#" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition-colors duration-300">
+                <a href="#" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition-colors duration-300 w-fit">
                     View projects
                 </a>
             </div>
-            <div class="md:w-1/2 w-full bg-zinc-600 aspect-square">
+            <div class="w-full aspect-square bg-zinc-200">
+                <img
+                    src=""
+                    alt=""
+                    class="w-full h-full"
+                />
             </div>
         </div>
     </Container>

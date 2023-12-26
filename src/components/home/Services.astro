@@ -1,13 +1,19 @@
 ---
-import Container from "../../layouts/Container.astro";
-const array = Array(11).fill(0);
+// IMPORT ASTRO LAYOUTS
+import Container from "../../layouts/Container.astro"
+
+// IMPORT ASTRO ATOMS
+import H3 from "../../atoms/H3.astro"
+import H6 from "../../atoms/H6.astro"
+
+const array = Array(11).fill(0)
 ---
 <section class="bg-black">
     <Container>
-        <div class="py-20">
-            <h2 class="text-3xl font-semibold mb-10 text-white">Our services</h2>
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="py-20 space-y-10">
+            <H3>Our services</H3>
+            <div>
+                <div class="grid grid-cols-4 gap-8">
                     {
 
                     array.map((value) => {
@@ -22,7 +28,7 @@ const array = Array(11).fill(0);
                                                 class="w-8 aspect-square"
                                             />
                                         </div>
-                                        <h3 class="text-xl font-extrabold text-white">Mobile Apps</h3>
+                                        <H6>Mobile Apps</H6>
                                     </div>
                                 </div>
                             )

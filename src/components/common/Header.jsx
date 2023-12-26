@@ -51,7 +51,7 @@ const Header = () => {
 
     return(
         <header className="hidden md:block">
-            <motion.header className={` ${ isScrolled ? "bg-black" : "bg-transparent" } w-full fixed z-50`}
+            <motion.header className={` ${ isScrolled ? "bg-black" : "bg-transparent" } h-24 flex items-center w-full fixed z-50`}
                 variants={ squareVariants }
                 initial="display"
                 animate={ controls }

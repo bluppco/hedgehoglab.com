@@ -1,0 +1,35 @@
+---
+// IMPORT ASTRO ATOMS
+import H5 from "../../atoms/H5.astro"
+
+const {
+
+    src,
+    alt,
+    logo_src,
+    logo_alt,
+    title,
+    category
+
+} = Astro.props
+---
+<div class="rounded-3xl overflow-hidden shadow-lg">
+    <div class="bg-zinc-200 w-full aspect-[3/2]">
+        <img
+            src={ src }
+            alt={ alt }
+            class="w-full h-full object-cover"
+        />
+    </div>
+    <div class="p-10 bg-pink-600 space-y-8">
+        <div class="bg-zinc-200 w-20 aspect-video">
+            <img
+                src={ logo_src }
+                alt={ logo_alt }
+                class="w-full h-full object-cover"
+            />
+        </div>
+        <H5>{ title }</H5>
+        <button class="h-10 flex justify-center items-center rounded-xl bg-white/80  px-4 text-sm">{ category }</button>
+    </div>
+</div>
