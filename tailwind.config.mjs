@@ -7,6 +7,9 @@ export default {
 				"bitter": ["Bitter", "serif"],
 				"montserrat": ["Montserrat", "sans-serif"],
 				"roboto": ["Roboto", "sans-serif"],
+			},
+			colors: {
+				"hhl_blue": "#1873F2"
 			}
 		},
 	},
