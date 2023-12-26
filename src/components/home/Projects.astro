@@ -4,8 +4,9 @@ import Container from "../../layouts/Container.astro"
 
 // IMPORT ASTRO ATOMS
 import H2 from "../../atoms/H2.astro"
+import Button from "../../atoms/Button.astro"
 ---
-<section class="bg-zinc-900">
+<section>
     <Container>
         <div class="grid grid-cols-2 gap-10">
             <div class="flex flex-col gap-8 justify-center">
@@ -13,9 +14,7 @@ import H2 from "../../atoms/H2.astro"
                 <p class="text-lg text-white">
                     From financial services to pharmaceuticals, energy giants to fast food connoisseurs – we’ve partnered with global brands that are leaders in their field. But while we’re proud of our projects, we’re constantly curious about what’s next. If you’ve got a business challenge, we’d love to help you solve it through carefully considered, intelligent tech solutions.
                 </p>
-                <a href="#" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition-colors duration-300 w-fit">
-                    View projects
-                </a>
+                <Button>View projects</Button>
             </div>
             <div class="w-full aspect-square bg-zinc-200">
                 <img
