@@ -29,7 +29,7 @@ const Header = () => {
     const squareVariants = {
 
         display: { y: 0, transition: { duration: .2 } },
-        hide: { y: "-100%", transition: { duration: .4 } },
+        hide: { y: "-150%", transition: { duration: .4 } },
 
     }
     const controls = useAnimation( scrollY )
@@ -51,7 +51,7 @@ const Header = () => {
 
     return(
         <header className="hidden md:block">
-            <motion.header className={` ${ isScrolled ? "bg-black" : "bg-transparent" } h-24 flex items-center w-full fixed z-50`}
+            <motion.header className={` ${ isScrolled ? "bg-black top-0" : "bg-transparent" } h-24 flex items-center w-full fixed z-50`}
                 variants={ squareVariants }
                 initial="display"
                 animate={ controls }
