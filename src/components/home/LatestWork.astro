@@ -8,36 +8,39 @@ import H3 from "../../atoms/H3.astro"
 // IMPORT ASTRO COMPONENTS
 import Work from "./Work.astro"
 import Button from "../../atoms/Button.astro"
+const work = Array(3).fill({
+
+    title: "Harnessing innovative AI technology to create ‘The Ultimate Team Talk’.",
+    cta_text: "Retail",
+    color: "rgb(209, 240, 86)"
+
+});
+console.log( work )
 ---
 <section>
     <Container>
         <div class="py-20 space-y-10">
             <H3>Check out our latest work</H3>
             <div class="grid grid-cols-3 gap-8">
-                <Work
-                    src=""
-                    alt=""
-                    logo_src=""
-                    logo_alt=""
-                    title="Harnessing innovative AI technology to create ‘The Ultimate Team Talk’."
-                    category="Retail"
-                />
-                <Work
-                    src=""
-                    alt=""
-                    logo_src=""
-                    logo_alt=""
-                    title="Harnessing innovative AI technology to create ‘The Ultimate Team Talk’."
-                    category="Retail"
-                />
-                <Work
-                    src=""
-                    alt=""
-                    logo_src=""
-                    logo_alt=""
-                    title="Harnessing innovative AI technology to create ‘The Ultimate Team Talk’."
-                    category="Retail"
-                />
+                {
+
+                    work.map( ( data ) => {
+
+                        return (
+                            <Work
+                                src=""
+                                alt=""
+                                logo_src=""
+                                logo_alt=""
+                                title={ data.title }
+                                category={ data.cta_text }
+                                color={ data.color }
+                            />
+                        )
+
+                    })
+
+                }
             </div>
             <div class="flex justify-end mt-8">
                 <Button>Show me more</Button>
