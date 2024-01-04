@@ -8,6 +8,17 @@ import { endpointFetch } from "../functions/endpoint"
 // const network_data = await fetch( endpoint + "/home" )
 // const data_json = await network_data.json()
 
+let home_work = null
+// data_json.home.map( ( data ) => {
+
+// 	if( data.section === "our-work" ){
+
+// 		home_work = data
+
+// 	}
+// })
+
+
 // IMPORT ASTRO COMPONENTS
 import Layout from "../layouts/Layout.astro"
 
@@ -35,7 +46,7 @@ import HowWeDoIt from "../components/home/HowWeDoIt.astro"
 	<WhatWeDo />
 	<Services />
 	<Projects />
-	<LatestWork />
+	<LatestWork work={ home_work ? home_work : null  }/>
 	<WorkedWith />
 	<HowWeDoIt />
 	<FlutterWhitePaper />

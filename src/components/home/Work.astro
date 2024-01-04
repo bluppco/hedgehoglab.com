@@ -4,12 +4,13 @@ import H5 from "../../atoms/H5.astro"
 
 const {
 
-    src,
     alt,
-    logo_src,
+    category,
+    color,
     logo_alt,
+    logo_src,
+    src,
     title,
-    category
 
 } = Astro.props
 ---
@@ -21,7 +22,7 @@ const {
             class="w-full h-full object-cover"
         />
     </div>
-    <div class="p-10 bg-pink-600 space-y-8">
+    <div class={`p-10 space-y-8`} style={{ "background-color": color }}>
         <div class="bg-zinc-200 w-20 aspect-video">
             <img
                 src={ logo_src }
