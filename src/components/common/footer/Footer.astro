@@ -1,0 +1,149 @@
+---
+// IMPORT ASTRO ATOMS
+import H6 from '../../../atoms/H6.astro'
+
+// IMPORT ASTRO LAYOUTS
+import Container from '../../../layouts/Container.astro'
+
+// IMPORT ASTRO COMPONENTS
+import SocialIcons from './SocialIcons.astro'
+
+import { getCollection } from 'astro:content'
+
+let footer_column_one = await getCollection('footer-column-one')
+footer_column_one = footer_column_one.sort((a, b) => a.data.order - b.data.order)
+footer_column_one = footer_column_one.filter( ( item ) => item.data.live )
+
+let footer_column_two = await getCollection('footer-column-two')
+footer_column_two = footer_column_two.sort((a, b) => a.data.order - b.data.order)
+footer_column_two = footer_column_two.filter( ( item ) => item.data.live )
+
+let footer_column_three = await getCollection('footer-column-three')
+footer_column_three = footer_column_three.sort((a, b) => a.data.order - b.data.order)
+footer_column_three = footer_column_three.filter( ( item ) => item.data.live )
+
+let footer_column_four = await getCollection('footer-column-four')
+footer_column_four = footer_column_four.sort((a, b) => a.data.order - b.data.order)
+footer_column_four = footer_column_four.filter( ( item ) => item.data.live )
+
+import { frontmatter as footerColumnTwo } from "../../../content/footer-titles/title-two.md"
+import { frontmatter as footerColumnThree } from "../../../content/footer-titles/title-three.md"
+import { frontmatter as footerColumnFour } from "../../../content/footer-titles/title-four.md"
+---
+<footer class="bg-hhl_blue py-20 z-30 relative">
+    <Container>
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="flex flex-col items-center md:items-start">
+                    {
+
+                        footer_column_one.map( ( item ) => {
+
+                            return (
+                                <div class="flex items-center gap-4">
+                                    <ul class="py-2">
+                                        <li class="font-montserrat font-extrabold text-white">
+                                            <a href={ item.data.link }>
+                                                <p>{ item.data.title }</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )
+
+                        })
+
+                    }
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="pb-2">
+                        <H6>{ footerColumnTwo.title }</H6>
+                    </div>
+                    {
+
+                        footer_column_two.map( ( item ) => {
+
+                            return (
+                                <div class="flex items-center gap-4">
+                                    <ul class="py-2">
+                                        <li class="font-montserrat font-semibold text-white">
+                                            <a href={ item.data.link }>
+                                                <p>{ item.data.title }</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )
+
+                        })
+
+                    }
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="pb-2">
+                        <H6>{ footerColumnThree.title }</H6>
+                    </div>
+                    {
+
+                        footer_column_three.map( ( item ) => {
+
+                            return (
+                                <div class="flex items-center gap-4">
+                                    <ul class="py-2">
+                                        <li class="font-montserrat font-semibold text-white">
+                                            <a href={ item.data.link }>
+                                                <p>{ item.data.title }</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )
+
+                        })
+
+                    }
+                </div>
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="pb-4">
+                        <H6>{ footerColumnFour.title }</H6>
+                    </div>
+                    {
+
+                        footer_column_four.map( ( item ) => {
+
+                            return (
+                                <div class="flex items-center gap-4">
+                                    <ul class="py-2">
+                                        <li class="font-montserrat font-semibold text-white">
+                                            <a href={ item.data.link }>
+                                                <p>{ item.data.title }</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )
+
+                        })
+
+                    }
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-3 gap-20 pt-20">
+            <a href="/">
+                <div class="w-32 aspect-video">
+                    <img
+                        src="/logos/hedgehog-logo-dark.svg"
+                        alt=""
+                        class="w-32 aspect-video"
+                    />
+                </div>
+            </a>
+            <!-- SOCIAL ICONS -->
+            <SocialIcons />
+            <div>
+                <p class="text-white text-sm">©2023 hedgehog lab – hedgehog lab Limited is a private limited company registered in England and Wales with company registration number 05993194. The registered office is at at Generator Studios, Trafalgar Street, Newcastle Upon Tyne, NE1 2LA. </p>
+            </div>
+        </section>
+    </Container>
+</footer>
