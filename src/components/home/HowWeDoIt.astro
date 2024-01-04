@@ -1,17 +1,28 @@
-<section class="bg-zinc-900">
-    <div class="container mx-auto flex flex-col-2 items-center px-6 py-16 md:py-24 gap-8">
-        <div class="md:w-1/2 w-full bg-zinc-600 aspect-square">
+---
+// IMPORT ASTRO LAYOUTS
+import Container from "../../layouts/Container.astro"
+
+// IMPORT ASTRO ATOMS
+import H2 from "../../atoms/H2.astro"
+import Button from "../../atoms/Button.astro"
+---
+<section>
+    <Container>
+        <div class="grid grid-cols-2 gap-20 py-20">
+            <div class="w-full aspect-square bg-zinc-200">
+                <img
+                    src=""
+                    alt=""
+                    class="w-full h-full"
+                />
+            </div>
+            <div class="flex flex-col gap-8 justify-center">
+                <H2>Digital transformation that truly makes a difference.</H2>
+                <p class="text-lg text-white">
+                    Looking for a tech solution that revitalises your processes and bolsters your business objectives? Look no further. Combining expertise in UXR, UI/UX, engineering, cloud and data science with creative flair, a curious mindset and a passion for human progress through technology – we tackle complex problems to create profound results.
+                </p>
+                <Button>How we do it</Button>
+            </div>
         </div>
-        <div class="md:w-1/2 w-full md:pr-10">
-            <h1 class="text-5xl font-bold text-white leading-tight mb-6">
-                Digital transformation that truly makes a difference.
-            </h1>
-            <p class="text-lg text-gray-300 mb-8">
-                Looking for a tech solution that revitalises your processes and bolsters your business objectives? Look no further. Combining expertise in UXR, UI/UX, engineering, cloud and data science with creative flair, a curious mindset and a passion for human progress through technology – we tackle complex problems to create profound results.
-            </p>
-            <a href="#" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition-colors duration-300">
-                How we do it
-            </a>
-        </div>
-    </div>
+    </Container>
 </section>

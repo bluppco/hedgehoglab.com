@@ -1,17 +1,29 @@
-<section class="bg-zinc-900">
-    <div class="container mx-auto flex flex-wrap items-center px-6 py-16 md:py-24">
-        <div class="md:w-1/2 w-full md:pr-10">
-            <h1 class="text-5xl font-bold text-white leading-tight mb-6">
-                The team you wish you’d discovered sooner.
-            </h1>
-            <p class="text-lg text-gray-300 mb-8">
-                Digital transformation requires dedication and vast in-house capabilities. So, you’ll be needing empathetic UX researchers, designers who put humans at the heart of every concept, award-winning developers and a QA team who could perform meticulous testing in their sleep. That’s where a global tech consultancy like us comes in.
-            </p>
-            <a href="#" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition-colors duration-300">
-                Meet us
-            </a>
+---
+// IMPORT ASTRO LAYOUTS
+import Container from "../../layouts/Container.astro"
+
+// IMPORT ASTRO ATOMS
+import H2 from "../../atoms/H2.astro"
+---
+<section>
+    <Container>
+        <div class="grid grid-cols-2 gap-20 py-20">
+            <div class="flex flex-col gap-8 justify-center">
+                <H2>The team you wish you’d discovered sooner.</H2>
+                <p class="text-lg text-white">
+                    Digital transformation requires dedication and vast in-house capabilities. So, you’ll be needing empathetic UX researchers, designers who put humans at the heart of every concept, award-winning developers and a QA team who could perform meticulous testing in their sleep. That’s where a global tech consultancy like us comes in.
+                </p>
+                <a href="#" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition-colors duration-300 w-fit">
+                    Meet us
+                </a>
+            </div>
+            <div class="w-full aspect-square bg-zinc-200">
+                <img
+                    src=""
+                    alt=""
+                    class="w-full h-full"
+                />
+            </div>
         </div>
-        <div class="md:w-1/2 w-full bg-zinc-600 aspect-square">
-        </div>
-    </div>
+    </Container>
 </section>

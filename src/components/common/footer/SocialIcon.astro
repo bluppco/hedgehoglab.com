@@ -1,0 +1,12 @@
+---
+const { href, src, alt } = Astro.props
+---
+<a href={ href }>
+    <div class="w-8 aspect-square">
+        <img
+            src={ src }
+            alt={ alt }
+            class="w-8 aspect-square"
+        />
+    </div>
+</a>

@@ -1,10 +1,17 @@
-<section>
-    <div class="bg-purple-600 w-full py-6 flex justify-between items-center px-4 sm:px-8 lg:px-16">
-        <h2 class="text-white text-2xl font-semibold">
-            Check out our latest White Paper on Flutter
-        </h2>
-        <a href="#" class="bg-white text-purple-600 py-2 px-4 rounded-lg font-medium hover:bg-gray-100">
-            Find out more
-        </a>
-    </div>
+---
+// IMPORT ASTRO LAYOUTS
+import Container from "../../layouts/Container.astro"
+
+// IMPORT ASTRO ATOMS
+import H3 from "../../atoms/H3.astro"
+---
+<section class="bg-purple-600 py-20">
+    <Container>
+        <div class=" w-full py-6 flex justify-between items-center px-4 sm:px-8 lg:px-16">
+            <H3>Check out our latest White Paper on Flutter</H3>
+            <a href="#" class="bg-white text-purple-600 py-2 px-4 rounded-lg font-medium hover:bg-gray-100">
+                Find out more
+            </a>
+        </div>
+    </Container>
 </section>

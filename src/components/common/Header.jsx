@@ -29,7 +29,7 @@ const Header = () => {
     const squareVariants = {
 
         display: { y: 0, transition: { duration: .2 } },
-        hide: { y: "-100%", transition: { duration: .4 } },
+        hide: { y: "-150%", transition: { duration: .4 } },
 
     }
     const controls = useAnimation( scrollY )
@@ -51,7 +51,7 @@ const Header = () => {
 
     return(
         <header className="hidden md:block">
-            <motion.header className={` ${ isScrolled ? "bg-black" : "bg-transparent" } w-full fixed z-50`}
+            <motion.header className={` ${ isScrolled ? "bg-black top-0" : "bg-transparent" } h-24 flex items-center w-full fixed z-50`}
                 variants={ squareVariants }
                 initial="display"
                 animate={ controls }
@@ -69,7 +69,7 @@ const Header = () => {
                         </a>
                         <div className="text-white cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
                             </svg>
                         </div>
                     </nav>
