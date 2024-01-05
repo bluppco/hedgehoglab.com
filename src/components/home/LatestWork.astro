@@ -8,14 +8,18 @@ import H3 from "../../atoms/H3.astro"
 // IMPORT ASTRO COMPONENTS
 import Work from "./Work.astro"
 import Button from "../../atoms/Button.astro"
+
 const work = Array(3).fill({
 
     title: "Harnessing innovative AI technology to create ‘The Ultimate Team Talk’.",
     cta_text: "Retail",
-    color: "rgb(209, 240, 86)"
-
-});
-// console.log( work )
+    color: "rgb(209, 240, 86)",
+    src: "/under-armour.png",
+    alt: "",
+    logo_src: "/under-armour-logo.png",
+    logo_alt: "",
+    category: ""
+})
 ---
 <section>
     <Container>
@@ -28,10 +32,10 @@ const work = Array(3).fill({
 
                         return (
                             <Work
-                                src=""
-                                alt=""
-                                logo_src=""
-                                logo_alt=""
+                                src={ data.src }
+                                alt={ data.alt }
+                                logo_src={ data.logo_src }
+                                logo_alt={ data.logo_alt }
                                 title={ data.title }
                                 category={ data.cta_text }
                                 color={ data.color }
@@ -42,7 +46,7 @@ const work = Array(3).fill({
 
                 }
             </div>
-            <div class="flex justify-end mt-8">
+            <div class="flex justify-end pt-6">
                 <Button>Show me more</Button>
             </div>
         </div>
