@@ -19,14 +19,14 @@ let home_work = null
 // })
 
 
-// IMPORT ASTRO COMPONENTS
+// IMPORT ASTRO LAYOUTS
 import Layout from "../layouts/Layout.astro"
 
+// IMPORT ASTRO COMPONENTS
 import HeaderBanner from "../components/common/HeaderBanner.astro"
 import Header from "../components/common/Header"
 import Footer from "../components/common/footer/Footer.astro"
 
-import Hero from "../components/home/Hero.astro"
 import WhatWeDo from "../components/home/WhatWeDo.astro"
 import Services from "../components/home/Services.astro"
 import Projects from "../components/home/Projects.astro"
@@ -36,12 +36,17 @@ import TeamUp from "../components/home/TeamUp.astro"
 import FlutterWhitePaper from "../components/home/FlutterWhitePaper.astro"
 import MeetUs from "../components/home/MeetUs.astro"
 import HowWeDoIt from "../components/home/HowWeDoIt.astro"
+
+// IMPORT JSX COMPONENTS
+import Hero from "../components/home/Hero.jsx"
+
+const images = [ "/hero-slider-image-1.png", "/hero-slider-image-2.png" ]
 ---
 <Layout>
 	<section class="relative h-screen max-h-screen overflow-hidden">
 		<HeaderBanner />
 		<Header client:load />
-		<Hero />
+		<Hero data= { images } client:load />
 	</section>
 	<WhatWeDo />
 	<Services />
