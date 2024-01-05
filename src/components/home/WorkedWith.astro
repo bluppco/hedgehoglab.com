@@ -6,30 +6,45 @@ import Container from "../../layouts/Container.astro"
 import H3 from "../../atoms/H3.astro"
 import H6 from "../../atoms/H6.astro"
 
-const array = Array(9).fill(0)
+const data = Array(9).fill({
+
+    title: "Financial Services",
+    color: "rgb(209, 240, 86)",
+    src: "/financial-services.jpg",
+    alt: "",
+    icon_src: "/calculator.svg",
+    icon_alt: ""
+})
 ---
 <section class="bg-black">
     <Container>
-        <div class="py-20 space-y-10">
+        <div class="py-20 space-y-4">
             <H3>The industries we’ve worked with.</H3>
             <p class="text-white">Digital transformation isn’t limited to any one particular industry. We work with companies spanning a wide range of sectors to help them unleash their full potential through human-centred global tech solutions. Whether you’re looking to captivate target audiences, gain competitive edge or simply carry on doing what you do best and let technology take care of the rest, we can work together to unearth your unique pain points and make your business ambitions a reality.</p>
             <div>
-                <div class="grid grid-cols-4 gap-8">
+                <div class="grid grid-cols-4 gap-8 py-16">
                     {
 
-                    array.map((value) => {
+                        data.map( ( item ) => {
 
                             return (
-                                <div class="flex items-center justify-center p-4 border border-white hover:bg-yellow-500 cursor-pointer rounded-3xl py-20">
-                                    <div class="flex flex-col items-center gap-2">
-                                        <div class="bg-zinc-200 w-8 aspect-square">
+                                <div class="flex items-center justify-center border border-white hover:bg-yellow-500 cursor-pointer rounded-3xl relative overflow-hidden group" style={{ "background-color": item.color }}>
+                                    <div class="w-full aspect-square opacity-0 group-hover:opacity-10">
+                                        <img
+                                            src={ item.src }
+                                            alt={ item.alt }
+                                            class="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center gap-2 absolute top-0 w-full h-full">
+                                        <div class="w-8 aspect-square">
                                             <img
-                                                src=""
-                                                alt=""
+                                                src={ item.icon_src }
+                                                alt={ item.icon_alt }
                                                 class="w-8 aspect-square"
                                             />
                                         </div>
-                                        <H6>Energy</H6>
+                                        <H6>{ item.title }</H6>
                                     </div>
                                 </div>
                             )
