@@ -6,17 +6,26 @@ import Container from "../../layouts/Container.astro"
 import H1 from "../../atoms/H1.astro"
 ---
 <section class="bg-zinc-600 h-screen flex items-center">
-	<Container>
-		<div class="">
-			<div class="w-[50%] space-y-10">
-				<H1>We’re a human-centred global tech consultancy.</H1>
-				<p class="text-xl text-white font-montserrat font-extrabold">
-					Constantly in pursuit of human progress through technology.
-				</p>
-				<button class="text-white font-bold py-2 px-4 rounded border">
-					Let's chat
-				</button>
-			</div>
+	<div class="">
+		<div class="w-full h-screen max-h-screen object-cover overflow-hidden">
+			<img
+				src="/hero-slider-image-1.png"
+				alt=""
+				class="w-full h-full"
+			/>
 		</div>
-	</Container>
+		<Container>
+			<div class="absolute top-0 flex items-center h-full w-full">
+				<div class="space-y-10 w-[40%]">
+					<H1>We’re a human-centred global tech consultancy.</H1>
+					<p class="text-xl text-white font-montserrat font-extrabold">
+						Constantly in pursuit of human progress through technology.
+					</p>
+					<button class="text-white font-bold py-2 px-4 rounded border">
+						Let's chat
+					</button>
+				</div>
+			</div>
+		</Container>
+	</div>
 </section>
